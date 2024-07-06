@@ -1,0 +1,17 @@
+tasks:
+  - name: Frontend
+    command: |
+      cd my-frontend
+      npm install
+      npm start
+  - name: Backend
+    command: |
+      cd my-backend
+      pip3 install -r requirements.txt
+      python3 app.py
+
+ports:
+  - port: 3000
+    onOpen: open-browser
+  - port: 5000
+    onOpen: open-browser
